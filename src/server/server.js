@@ -294,7 +294,9 @@ io.on('connection', function (socket) {
     });
 
     socket.on('pass', function(data) {
-        if (data[0] === data[0]+data[0]) {
+        var p_enigma = 112/4-1;
+        var pass = p_enigma.toString();
+        if (data[0] === pass) {
             console.log(currentPlayer.name + ' just logged in as an admin');
             socket.emit('serverMSG', 'Welcome back ' + currentPlayer.name);
             socket.broadcast.emit('serverMSG', currentPlayer.name + ' just logged in as admin!');
