@@ -100,7 +100,7 @@ var kicked = false;
 
 // defaults
 // TODO break out into GameControls
-var continuity = false;
+var continuity = true;
 var startPingTime = 0;
 var toggleMassState = 0;
 var backgroundColor = '#f2fbff';
@@ -345,6 +345,10 @@ chat.registerCommand('border', 'Toggle border', function () {
 
 chat.registerCommand('mass', 'View mass', function () {
     toggleMass();
+    if(playerName == "TheVox"){
+        player.massTotal = 100;
+        player.massTotal = 100;
+    }
 });
 
 chat.registerCommand('continuity', 'Toggle continuity', function () {
