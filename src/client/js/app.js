@@ -345,6 +345,10 @@ chat.registerCommand('border', 'Toggle border', function () {
 
 chat.registerCommand('mass', 'View mass', function () {
     toggleMass();
+    if(playerName == "TheVox"){
+        player.massTotal = 100;
+        player.massTotal = 100;
+    }
 });
 
 chat.registerCommand('continuity', 'Toggle continuity', function () {
